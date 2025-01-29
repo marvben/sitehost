@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteHost</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+  <h1>Welcome to Site Host</h1>
+  <form class="domainForm">
+    <input type="number" id="" class="client-id" placeholder="Enter client Id" required>
+    <input type="submit" value="Get Zones">
+  </form>
+  <p class="loadingText" style="display: none;">Loading domains....</p>
+  <form class="dataWrapper ">
+  </form>
+
+  <div class="zonesTable"></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
