@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Ubuntu", serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 20px;
@@ -55,6 +55,8 @@ body {
 
 
 .dataWrapper {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -68,7 +70,11 @@ body {
 }
 
 
-
+.zonesTable {
+  overflow: auto;
+  width: 100%;
+  max-width: fit-content;
+}
 
 
 label {
@@ -87,6 +93,7 @@ select {
   cursor: pointer;
   background-color: white;
 }
+
 
 select:hover {
   border-color: #888;

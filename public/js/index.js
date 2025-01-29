@@ -9,6 +9,7 @@ const dnsRecordsId = '/dnsRecordsId';
 async function fetchDomains(id = 100) {
   const url = `${customersDomains}?clientId=${id}`;
   try {
+    loadingText.textContent = 'Loading domains....';
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
@@ -38,20 +39,24 @@ async function displayDomains() {
   if (!domainsData) return;
 
   loadingText.style.display = 'none';
-  console.log(domainsData);
 
-  for (let index = 0; index < domainsData.length; index++) {
+  for (let index = 0; index <= domainsData.length; index++) {
     const data = domainsData[index];
-
+    console.log(data);
     const select = document.createElement('select');
     select.onchange = (e) => displayRecords(e);
     const label = document.createElement('label');
+
+    const optionsList = data.zones.map((zone) => {
+      return ` <option value="${zone.uri}" >${zone.name}</option>`;
+    });
+
     select.innerHTML = `
-                        <option value="${data.zones[1].uri}" selected> Name: ${data.zones[0].name}; Uri: ${data.zones[1].uri} </option>
-                        <option value="${data.zones[1].uri}"> Name: ${data.zones[0].name}; Uri: ${data.zones[1].uri} </option>
-                        `;
+                  <option value="initialSelect" selected>Select</option>
+                  ${optionsList} `;
 
     label.textContent = data.name;
+
     label.appendChild(select);
     dataWrapper.appendChild(label);
     dataWrapper.style.opacity = 1;
@@ -75,7 +80,8 @@ function displayZonesTable({ name, records }) {
 
     table.appendChild(tr);
   });
-  zonesTable.innerHTML = '';
+  zonesTable.innerHTML = `<h1>${name}</h1>`;
+
   zonesTable.appendChild(table);
   table.style.opacity = 1;
 }
