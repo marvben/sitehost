@@ -10,6 +10,89 @@ body {
   min-height: 100vh;
 }
 
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1E3A8A;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: left;
+  color: #1E3A8A;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #2563EB;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+
+
+.beautiful-icon {
+  font-size: 50px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.beautiful-icon:hover {
+  color: #ff9900;
+  transform: scale(1.2) rotate(10deg);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 .domainForm {
   max-width: 400px;
   margin: 20px auto;

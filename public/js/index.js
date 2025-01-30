@@ -20,7 +20,7 @@ async function fetchDomains(id = 100) {
 
 async function fetchDNSRecords(zone) {
   const url = `${dnsRecordsId}?zoneAndId=${zone}`;
-  zonesTable.innerHTML = '<h1>Loading zones.....</h1>';
+  zonesTable.innerHTML = '<h2>Loading zones.....</h2>';
 
   try {
     const { data } = await axios.get(url);
@@ -80,7 +80,7 @@ function displayZonesTable({ name, records }) {
 
     table.appendChild(tr);
   });
-  zonesTable.innerHTML = `<h1>${name}</h1>`;
+  zonesTable.innerHTML = `<h2>${name}</h2>`;
 
   zonesTable.appendChild(table);
   table.style.opacity = 1;
