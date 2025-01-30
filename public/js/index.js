@@ -19,14 +19,16 @@ async function fetchDomains(id = 100) {
 }
 
 async function fetchDNSRecords(zone) {
-  const url = `${dnsRecordsId}?zoneAndId=${zone}`;
-  zonesTable.innerHTML = '<h2>Loading zones.....</h2>';
+  if (zone !== 'initialSelect') {
+    const url = `${dnsRecordsId}?zoneAndId=${zone}`;
+    zonesTable.innerHTML = '<h2>Loading zones.....</h2>';
 
-  try {
-    const { data } = await axios.get(url);
-    return displayZonesTable(data);
-  } catch (error) {
-    console.error(`Error fetching DNS records for zone ${zone}:`, error);
+    try {
+      const { data } = await axios.get(url);
+      return displayZonesTable(data);
+    } catch (error) {
+      console.error(`Error fetching DNS records for zone ${zone}:`, error);
+    }
   }
 }
 
@@ -92,7 +94,7 @@ domainForm.addEventListener('submit', async (e) => {
 });
 
 async function displayRecords(select) {
-  if (select) {
+  if (select.target.value) {
     await fetchDNSRecords(select.target.value);
   }
 }

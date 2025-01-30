@@ -1,13 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
 body {
   font-family: "Ubuntu", serif;
   background-color: #f4f4f4;
   margin: 0;
-  padding: 20px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
 }
 
 
@@ -216,4 +223,33 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #f1f1f1;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+
+}
+
+/* Signature Link */
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.signature:hover {
+  color: #1E3A8A;
+  transform: scale(1.1);
+  text-decoration: underline;
 }
