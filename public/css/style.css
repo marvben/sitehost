@@ -28,19 +28,6 @@ h1 {
   animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 h2 {
   font-size: 2.2rem;
   font-weight: 600;
@@ -52,17 +39,6 @@ h2 {
   animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 h2:hover {
   text-decoration: underline;
@@ -70,7 +46,6 @@ h2:hover {
   text-decoration-color: #2563EB;
   transition: text-decoration 0.3s ease-in-out;
 }
-
 
 
 .beautiful-icon {

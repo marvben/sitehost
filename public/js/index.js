@@ -44,7 +44,6 @@ async function displayDomains() {
 
   for (let index = 0; index <= domainsData.length; index++) {
     const data = domainsData[index];
-    console.log(data);
     const select = document.createElement('select');
     select.onchange = (e) => displayRecords(e);
     const label = document.createElement('label');
@@ -90,6 +89,8 @@ function displayZonesTable({ name, records }) {
 
 domainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+  if (dataWrapper.hasChildNodes()) zonesTable.innerHTML = '';
+  if (zonesTable.hasChildNodes()) zonesTable.innerHTML = '';
   await displayDomains();
 });
 
