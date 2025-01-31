@@ -8,7 +8,7 @@ body {
   font-family: "Ubuntu", serif;
   background-color: #f4f4f4;
   margin: 0;
-  padding: 50px 20px;
+  padding: 50px 20px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,7 +206,7 @@ footer {
   bottom: 20px;
   right: 50%;
   transform: translateX(50%);
-
+  width: 100%;
 }
 
 /* Signature Link */
@@ -218,7 +218,6 @@ footer {
   font-weight: 600;
   display: block;
   text-align: center;
-  margin-top: 30px;
   transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
